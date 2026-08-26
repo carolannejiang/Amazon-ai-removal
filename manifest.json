@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon: No AI",
+  "version": "1.0",
+  "description": "Removes Rufus and the AI review summaries from Amazon.",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.amazon.com/*",
+        "*://*.amazon.co.uk/*",
+        "*://*.amazon.ca/*",
+        "*://*.amazon.de/*",
+        "*://*.amazon.fr/*",
+        "*://*.amazon.es/*",
+        "*://*.amazon.it/*",
+        "*://*.amazon.co.jp/*",
+        "*://*.amazon.in/*",
+        "*://*.amazon.com.au/*",
+        "*://*.amazon.com.mx/*",
+        "*://*.amazon.com.br/*"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "css": [
+        "block.css"
+      ]
+    }
+  ]
+}

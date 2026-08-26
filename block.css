@@ -1,0 +1,19 @@
+/* Rufus: chat button, search-bar prompts, side panel.
+   Patterns are anchored (^, or "-rufus"/" rufus" token boundaries) on purpose.
+   A bare [id*="rufus"] can match a structural wrapper and blank the page. */
+:where(div,span,section,aside,button,a,li,form)[id^="rufus" i],
+:where(div,span,section,aside,button,a,li,form)[id*="-rufus" i],
+:where(div,span,section,aside,button,a,li,form)[class^="rufus" i],
+:where(div,span,section,aside,button,a,li,form)[class*=" rufus" i],
+:where(div,span,section,aside,button,a,li,form)[data-cel-widget^="rufus" i],
+:where(div,span,section,aside,button,a,li,form)[data-testid^="rufus" i],
+:where(div,span,section,aside,button,a,li,form)[aria-label*="rufus" i],
+
+/* AI-generated review summary on product pages */
+#product-summary,
+#cr-product-insights-cards,
+#cr-summarization-content,
+[data-hook="cr-insights-widget"],
+[data-hook="cr-summarization-attributes-list"] {
+  display: none !important;
+}
