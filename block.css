@@ -4,6 +4,7 @@
 :where(div,span,section,aside,button,a,li,form)[id^="rufus" i],
 :where(div,span,section,aside,button,a,li,form)[id*="-rufus" i],
 :where(div,span,section,aside,button,a,li,form)[class^="rufus" i],
+:where(div,span,section,aside,button,a,li,form)[class*="-rufus" i],
 :where(div,span,section,aside,button,a,li,form)[class*=" rufus" i],
 :where(div,span,section,aside,button,a,li,form)[data-cel-widget^="rufus" i],
 :where(div,span,section,aside,button,a,li,form)[data-testid^="rufus" i],
@@ -14,6 +15,21 @@
 #cr-product-insights-cards,
 #cr-summarization-content,
 [data-hook="cr-insights-widget"],
-[data-hook="cr-summarization-attributes-list"] {
+[data-hook="cr-summarization-attributes-list"],
+[data-csa-c-item-id="cr-product-insights-cards"],
+[data-csa-c-item-id="cr-product-insights-detail-page"] {
   display: none !important;
+}
+
+/* Rufus can dock the hidden panel by reserving space on the page body. */
+body.rufus-docked-left,
+body.rufus-docked-right,
+body.rufus-docked-adjustable,
+body.rufus-docked-opening-transition,
+body.rufus-docked-closing-transition {
+  --rufus-docked-panel-width: 0px !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

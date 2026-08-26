@@ -39,6 +39,7 @@ Same effect without an extra extension — paste into uBlock's
 amazon.*##div[id^="rufus" i]
 amazon.*##div[id*="-rufus" i]
 amazon.*##div[class^="rufus" i]
+amazon.*##:is(div,span,section,aside,button,a,li,form)[class*="-rufus" i]
 amazon.*##div[data-cel-widget^="rufus" i]
 amazon.*##button[aria-label*="rufus" i]
 amazon.*###product-summary
@@ -46,4 +47,7 @@ amazon.*###cr-product-insights-cards
 amazon.*###cr-summarization-content
 amazon.*##[data-hook="cr-insights-widget"]
 amazon.*##[data-hook="cr-summarization-attributes-list"]
+amazon.*##[data-csa-c-item-id="cr-product-insights-cards"]
+amazon.*##[data-csa-c-item-id="cr-product-insights-detail-page"]
+amazon.*##body:is(.rufus-docked-left,.rufus-docked-right,.rufus-docked-adjustable,.rufus-docked-opening-transition,.rufus-docked-closing-transition):style(--rufus-docked-panel-width:0px!important;margin-left:0!important;margin-right:0!important;padding-left:0!important;padding-right:0!important;)
 ```
